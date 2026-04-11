@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayRoll Edge — Timesheets</title>
+  <style>
+    :root {
+      --bg: #081d3a;
+      --panel: #112c52;
+      --text: #eef5ff;
+      --muted: #a9bfdd;
+      --accent: #4f8cff;
+      --border: rgba(255, 255, 255, 0.08);
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: radial-gradient(circle at top, rgba(79, 140, 255, 0.12), transparent 40%), #081d3a;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      margin-bottom: 28px;
+    }
+
+    nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    nav a { color: var(--text); padding: 10px 14px; border-radius: 999px; text-decoration: none; }
+    nav a:hover, nav a.active { background: rgba(79, 140, 255, 0.18); }
+
+    .panel {
+      background: rgba(255,255,255,0.04);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .panel h1,
+    .panel h2 { margin: 0 0 10px; }
+
+    .panel p { color: var(--muted); }
+
+    .sheet-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .sheet-card {
+      display: grid;
+      gap: 12px;
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .sheet-card strong { font-size: 1rem; }
+    .sheet-card span { color: var(--muted); }
+
+    .button {
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #4f8cff, #3673d4);
+      color: white;
+      padding: 12px 18px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-box {
+      display: grid;
+      gap: 12px;
+      padding: 22px;
+      background: rgba(79, 140, 255, 0.08);
+      border: 1px solid rgba(79, 140, 255, 0.18);
+      border-radius: 22px;
+      color: var(--text);
+    }
+
+    .info-box p { margin: 0; color: var(--muted); }
+
+    footer { margin-top: 30px; text-align: center; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div style="font-weight:700;font-size:1.1rem;">PayRoll Edge</div>
+        <div style="color: var(--muted); font-size:0.92rem;">Timesheet control</div>
+      </div>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="staff.html">Staff</a>
+        <a href="timesheets.html" class="active">Timesheets</a>
+        <a href="payslips.html">Payslips</a>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <h1>Timesheets</h1>
+      <p>Streamlined hours tracking with corporate-grade visibility. Verify billable time, approve timesheets, and move seamlessly into payroll execution.</p>
+    </section>
+
+    <div class="sheet-list">
+      <div class="sheet-card">
+        <strong>Weekly summary</strong>
+        <span>Staff have logged 542 hours this week. 34 entries pending approval.</span>
+      </div>
+      <div class="sheet-card">
+        <strong>Audit-ready review</strong>
+        <span>All timesheet records remain encrypted and ready for a secure payroll audit.</span>
+      </div>
+      <div class="sheet-card">
+        <strong>Work hours flow</strong>
+        <span>Log work hours → Calculate tax → View payslip → Export data.</span>
+      </div>
+    </div>
+
+    <section class="info-box">
+      <h2>Information Display: Tax View</h2>
+      <p>Press the button below to reveal executive tax guidance for selected timesheet totals.</p>
+      <button class="button" onclick="alert('Tax view activated. Review payroll projections.');">Open Tax View</button>
+    </section>
+
+    <section class="panel" style="display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center;">
+      <div>
+        <h2>Authentication</h2>
+        <p>Login and register options are available for the corporate timesheet portal.</p>
+      </div>
+      <a href="index.html" class="button">Return to Dashboard</a>
+    </section>
+
+    <footer>Single-file HTML page ready for GitHub Pages upload.</footer>
+  </div>
+</body>
+</html>

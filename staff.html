@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayRoll Edge — Staff</title>
+  <style>
+    :root {
+      --bg: #081d3a;
+      --panel: #112c52;
+      --text: #eef5ff;
+      --muted: #a9bfdd;
+      --accent: #4f8cff;
+      --border: rgba(255, 255, 255, 0.08);
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: radial-gradient(circle at top, rgba(79, 140, 255, 0.12), transparent 35%), #081d3a;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      margin-bottom: 30px;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active { background: rgba(79, 140, 255, 0.18); }
+
+    .panel {
+      background: rgba(255,255,255,0.04);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .panel h1,
+    .panel h2 { margin-top: 0; }
+
+    .panel p { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .tile {
+      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+    }
+
+    .tile h3 { margin: 0 0 10px; }
+    .tile p { margin: 0; color: var(--muted); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #4f8cff, #3673d4);
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .security-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      margin-top: 14px;
+    }
+
+    .security-item svg { width: 22px; height: 22px; fill: var(--accent); }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.92rem; padding-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div style="font-weight:700;font-size:1.1rem;">PayRoll Edge</div>
+        <div style="color: var(--muted); font-size:0.92rem;">Staff overview</div>
+      </div>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="staff.html" class="active">Staff</a>
+        <a href="timesheets.html">Timesheets</a>
+        <a href="payslips.html">Payslips</a>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <h1>Corporate staff insights</h1>
+      <p>Manage headcount, role access, and secure payroll permissions with a modern navy interface built for enterprise clarity.</p>
+    </section>
+
+    <div class="grid">
+      <div class="tile">
+        <h3>Team roster</h3>
+        <p>Active staff: 124 · Payroll eligible: 107 · Secure access: enforced</p>
+      </div>
+      <div class="tile">
+        <h3>Payroll status</h3>
+        <p>Next payroll cycle is locked. Review staff hours before final approval.</p>
+      </div>
+      <div class="tile">
+        <h3>Security options</h3>
+        <p>Fingerprint and FaceID-style authentication may be enabled on your company access profile.</p>
+      </div>
+    </div>
+
+    <section class="panel" style="margin-top: 24px;">
+      <h2>Data protection</h2>
+      <div class="security-item">
+        <svg viewBox="0 0 24 24"><path d="M12 1a6 6 0 0 0-6 6v3.1c0 1.06-.31 2.1-.9 3L4 15.2V18h16v-2.8l-1.1-2.1c-.6-.9-.9-1.94-.9-3V7a6 6 0 0 0-6-6Zm0 2a4 4 0 0 1 4 4v3c0 .57.16 1.12.44 1.58L18 15v.99H6V15l1.56-3.42A2.99 2.99 0 0 0 8 10V7a4 4 0 0 1 4-4Zm-2 9a2 2 0 1 1 4 0v1H10v-1Zm2 6.5c-1.93 0-3.5-1.57-3.5-3.5h1.5a2 2 0 1 0 4 0H15c0 1.93-1.57 3.5-3.5 3.5Z"/></svg>
+        Fingerprint security available for payroll manager login.
+      </div>
+      <div class="security-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9v3.5c0 .83-.67 1.5-1.5 1.5S2 13.33 2 12.5V9C2 4.03 6.03 0 11 0h2c4.97 0 9 4.03 9 9v3.5c0 .83-.67 1.5-1.5 1.5S18 13.33 18 12.5V9c0-3.86-3.14-7-7-7Zm-6 14h12c1.1 0 2 .9 2 2v3c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2v-3c0-1.1.9-2 2-2Zm6 1.5c-2.76 0-5 2.24-5 5H7c0-2.21 1.79-4 4-4s4 1.79 4 4h1c0-2.76-2.24-5-5-5Z"/></svg>
+        FaceID concept simplifies future authentication adoption.
+      </div>
+    </section>
+
+    <section class="panel" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+      <div>
+        <h2>Quick action</h2>
+        <p>Open the staff vault or escalate payroll approval directly from the staff dashboard.</p>
+      </div>
+      <a href="index.html" class="button">Back to Dashboard</a>
+    </section>
+
+    <footer>Upload-ready, four-page site structure with inline CSS and JS for GitHub hosting.</footer>
+  </div>
+</body>
+</html>
